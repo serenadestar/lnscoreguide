@@ -1,37 +1,128 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/serenadestar/lnscoreguide.github.com/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/serenadestar/lnscoreguide.github.com/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Love Nikki Score Calculator</title>
+		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" type="text/css" href="ui.css">
+		<link rel="stylesheet" type="text/css" href="mobileui.css" media="only screen and (max-width: 650px)">
+		<script type='text/javascript' charset="UTF-8" src='jquery.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='jquery.freezeheader.js'></script>
+		<script type='text/javascript' charset="UTF-8" src="bootstrap/bootstrap.min.js"></script>
+		<script type='text/javascript' charset="UTF-8" src="tool.js"></script>
+		<script type='text/javascript' charset="UTF-8" src='wardrobe_ln.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='scoring.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='levels_ln.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='flist.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='model.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='ui.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='nikki.js'></script>
+  </head>
+  <body>
+		<div class='title'>
+			Love Nikki Score calculator translated from by <a href="http://seal100x.github.io/nikkiup2u3/">黑的升华-奇迹暖暖在线工具</a>
+		</div>
+		<div id="StrategyInfo"></div>
+		<div class='top'>	
+			<div class="fliter">
+				<div id='filtersTop'>
+					<div class="btn-group">
+						<select id="theme-fliter" onChange="reDrawTheme()" class="btn btn-default"></select>
+						<select id="theme" onChange="changeTheme()" class="btn btn-default"></select>
+					</div>
+					<div id="tagInfo"></div>
+					<div id="skillInfo"></div>
+					<div id="categoryFInfo"></div>
+					<div id="hintInfo"></div>
+				</div>
+				<div class="fliter_form_div">
+					<form name="filter_form" class="form-inline">
+						<div class="fliter_form_div_left">
+							<div class='facet'>
+								<div class="weightContainer" role="group" data-toggle="buttons">
+									<label class="btn btn-sm btn-default" style="width:80px;"><input class="filter-radio" type="radio" name="simple" value="1"/>Simple</label>
+									<label class="btn btn-sm btn-default" style="width:80px;"><input class="filter-radio" type="radio" name="simple" value="-1"/>Gorgeous</label>
+									<input class="btn-sm" placeholder="weight" type="text" id="simpleWeight" name="simpleWeight" value="1" onChange="changeFilter()" />
+									<span class="highscore-rank btn-sm" id="simplerank"></span>
+								</div>
+								<div class="weightContainer" role="group" data-toggle="buttons">
+									<label class="btn btn-sm btn-default" style="width:80px;"><input class="filter-radio" type="radio" name="cute" value="1"/>Cute</label>
+									<label class="btn btn-sm btn-default" style="width:80px;"><input class="filter-radio" type="radio" name="cute" value="-1"/>Mature</label>
+									<input class="btn-sm" placeholder="weight" type="text" id="cuteWeight" name="cuteWeight" value="1" onChange="changeFilter()" />
+									<span class="highscore-rank btn-sm" id="cuterank"></span>
+								</div>
+								<div class="weightContainer" role="group" data-toggle="buttons">
+									<label class="btn btn-sm btn-default" style="width:80px;"><input class="filter-radio" type="radio" name="active" value="1"/>Lively</label>
+									<label class="btn btn-sm btn-default" style="width:80px;"><input class="filter-radio" type="radio" name="active" value="-1"/>Elegant</label>
+									<input class="btn-sm" placeholder="weight" type="text" id="activeWeight" name="activeWeight" value="1" onChange="changeFilter()" />
+									<span class="highscore-rank btn-sm" id="activerank"></span>
+								</div>
+								<div class="weightContainer" role="group" data-toggle="buttons">
+									<label class="btn btn-sm btn-default" style="width:80px;"><input class="filter-radio" type="radio" name="pure" value="1"/>Pure</label>
+									<label class="btn btn-sm btn-default" style="width:80px;"><input class="filter-radio" type="radio" name="pure" value="-1"/>Sexy</label>
+									<input class="btn-sm" placeholder="weight" type="text" id="pureWeight" name="pureWeight" value="1" onChange="changeFilter()" />
+									<span class="highscore-rank btn-sm" id="purerank"></span>
+								</div>
+								<div class="weightContainer" role="group" data-toggle="buttons">
+									<label class="btn btn-sm btn-default" style="width:80px;"><input class="filter-radio" type="radio" name="cool" value="1"/>Cool</label>
+									<label class="btn btn-sm btn-default" style="width:80px;"><input class="filter-radio" type="radio" name="cool" value="-1"/>Warm</label>
+									<input class="btn-sm" placeholder="weight" type="text" id="coolWeight" name="coolWeight" value="1" onChange="changeFilter()" />
+									<span class="highscore-rank btn-sm" id="coolrank"></span>
+								</div>
+								<div class='weightContainer' id = "tag1Container" role="group" data-toggle="buttons">
+									<input class="btn-sm" placeholder="tag1" type="text" id="tag1" name="tag1" onChange="changeFilter()" />
+									<label class="btn btn-sm btn-default active"><input class="filter-radio" type="radio" name="tag1method" value="add" checked/>+</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="tag1method" value="replace"/>=</label>
+									<select class="btn-sm" id="tag1base" onChange="changeFilter()">
+										<option>SS</option>
+										<option>S</option>
+										<option>A</option>
+										<option>B</option>
+										<option>C</option>
+									</select>
+									<input class="btn-sm" type="text" id="tag1weight" name="tag1weight" value="1" onChange="changeFilter()" />
+								</div>
+								<div class='weightContainer' id = "tag2Container" role="group" data-toggle="buttons">
+									<input class="btn-sm" placeholder="tag2" type="text" id="tag2" name="tag2" onChange="changeFilter()" />
+									<label class="btn btn-sm btn-default active"><input class="filter-radio" type="radio" name="tag2method" value="add" checked/>+</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="tag2method" value="replace"/>=</label>
+									<select class="btn-sm" id="tag2base" onChange="changeFilter()">
+										<option>SS</option>
+										<option>S</option>
+										<option>A</option>
+										<option>B</option>
+										<option>C</option>
+									</select>
+									<input class="btn-sm" type="text" id="tag2weight" name="tag2weight" value="1" onChange="changeFilter()" />
+								</div>
+							</div><!-- facet -->
+							<div class="fliter_option clear">
+								<div class="checkbox" style="display:none;"><label><input type="checkbox" class="fliter" value="own" checked /> 拥有<span id='inventoryCount'/></label></div>
+								<div class="checkbox" style="display:none;"><label><input type="checkbox" class="fliter" value="missing" checked /> 没有</label></div>
+								<a href="#" class = "showmore" style="display:inline-block;cursor:pointer">↓ Show All↓</a>
+							</div><!-- fliter_option -->
+						</div>
+					</form>
+				</div><!-- fliter_form_div -->
+			</div><!-- fliter -->
+		</div><!-- top -->
+		<hr>
+		</div>
+		<div id = 'shoppingCartContainer'>
+		  Outfit Parts  <button class="btn btn-default" style="float:right" onclick="clearShoppingCart()">Clear All</button>
+		  <div id='shoppingCart' class="table"></div>
+		</div>
+		<hr>
+		<div id = 'category_container'></div>
+		<div id = "clothes" class="table"></div>
+		<div class = "showmore" id= "showmore" isshowmore="1">↓ Show All ↓</div>
+		<div id = "end"></div>
+		<hr>
+		<hr />
+	</body>
+</html>
