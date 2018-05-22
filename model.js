@@ -160,9 +160,9 @@ Clothes = function(csv) {
               if(!isf_tag) isf = 0.1; 
 			}
         }
-		if((this.longid!='10926')&&(filters.levelName=="Story: 14-8")) {
-			isf=0.01;
-		}
+	if((this.longid!='10926')&&(filters.levelName=="Story: 14-8")) {
+		isf=0;
+	}
       }
       var s = 0;
       var self = this;
