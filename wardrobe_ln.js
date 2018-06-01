@@ -4941,7 +4941,7 @@ var wardrobe = [
   ['Lotus Mirror','饰品-手持·右','1667','5','A','','SS','','SS','','','A','A','','','Happiness','辞绣闺','V2.7.1','Wedding'],
   ['Butterfly Crown','饰品-头饰·发饰','1668','5','A','','SS','','SS','','','A','A','','Chinese Classical','Happiness','辞绣闺','V2.7.1','Wedding'],
   ['Rosy Sunset','饰品-特殊·后景','1669','5','SS','','SS','','A','','','S','A','','Chinese Classical','Happiness','辞绣闺','V2.7.1','Wedding'],
-  ['Happiness Overflow闺','饰品-特殊·地面','1670','5','A','','SS','','SS','','','A','A','','Chinese Classical','Happiness','辞绣闺','V2.7.1','Wedding'],
+  ['Happiness Overflow','饰品-特殊·地面','1670','5','A','','SS','','SS','','','A','A','','Chinese Classical','Happiness','辞绣闺','V2.7.1','Wedding'],
   ['To Kana','饰品-头饰·头纱','1671','5','SS','','A','','S','','','SS','S','','Wedding','Happiness','明日如诗','V2.7.1','Wedding'],
   ['Rose Whisper','饰品-颈饰·项链','1672','5','A','','SS','','S','','','SS','B','','','Happiness','明日如诗','V2.7.1','Wedding'],
   ['Encounter Love','饰品-手饰·双','1673','5','A','','S','','','SS','','S','S','','Wedding','Happiness','明日如诗','V2.7.1','Wedding'],
