@@ -366,7 +366,7 @@ var pattern = [
 
 // 开心的修改代码
 var themeFilter = [
-	//['活动', '活动'],
+	['Event', 'Event'],
 	['Stylist\'s Arena', 'Arena'],
 	['联盟协战', '协战'],
 	//['联盟第十章', 'Commission: 10-'],
@@ -398,28 +398,28 @@ var themeFilter = [
 	['Chapter 3', 'Story: 3-'],
 	['Chapter 2', 'Story: 2-'],
 	['Chapter 1', 'Story: 1-'],
-	//['织梦人', '织梦人'],
+	['Dreamweaver', 'Dreamweaver'],
 ];
 
 //顺序：简可活纯凉
 var competitionsRaw = {
+  'A Growing Lady': [0.67, -1.33, -1.33, 1.33, -1.0],
   'Beach Party': [0.67, 1.33, 1.0, -1.33, 1.33],
-  'Where Is Spring': [0.67, 1.33, 1.33, 1.33, 1.0],
-  'Office Star': [1.33, -1.33, -1.33, -1.0, 0.67],
-  'Summer Story': [1.33, 0.67, -1.33, 1.0, 1.33],
   'Christmas Reunion': [1.33, 1.0, 0.67, 1.33, -1.33],
-  'Spring Outing': [1.33, 1.33, 1.33, 1.0, 0.67],
-  'Ongoing Sports': [1.0, 0.67, 1.33, 1.33, 1.33],
-  'Golden Odeum': [-1.33, -1.33, -1.33, -1.0, -0.67],
-  'Summer Party': [1.33, 1.0, 0.67, 1.33, 1.33],
-  'The Queen': [-1.0, -1.33, -1.33, -1.33, 0.67],
+  'Cloud Lady': [-1.33, -1.0, -1.33, 1.33, -0.67],
+  'Fairytale Garden': [-1.33, 1.33, -1.33, 1.0, 0.67],
   'Fire in the Winter': [-0.67, 1.0, 1.33, -1.33, -1.33],
+  'Golden Odeum': [-1.33, -1.33, -1.33, -1.0, -0.67],
   'Great Detective': [1.33, -1.33, -1.33, 0.67, -1.0],
   'Imperial Ball': [-1.33, -1.0, -1.33, -1.33, -0.67],
-  'Fairytale Garden': [-1.33, 1.33, -1.33, 1.0, 0.67],
-  'A Growing Lady': [0.67, -1.33, -1.33, 1.33, -1.0],
-  'Cloud Lady': [-1.33, -1.0, -1.33, 1.33, -0.67],
-  'Intern Translator': [1.33, 0.67, -1.33, 1.33, 1.0]
+  'Intern Translator': [1.33, 0.67, -1.33, 1.33, 1.0],
+  'Office Star': [1.33, -1.33, -1.33, -1.0, 0.67],
+  'Ongoing Sports': [1.0, 0.67, 1.33, 1.33, 1.33],
+  'Spring Outing': [1.33, 1.33, 1.33, 1.0, 0.67],
+  'Summer Party': [1.33, 1.0, 0.67, 1.33, 1.33],
+  'Summer Story': [1.33, 0.67, -1.33, 1.0, 1.33],
+  'The Queen': [-1.0, -1.33, -1.33, -1.33, 0.67],
+  'Where Is Spring': [0.67, 1.33, 1.33, 1.33, 1.0]
 };
 
 var tasksRaw = {
@@ -537,11 +537,11 @@ var extraRaw = {
 //'愚人节1-魔力马戏团': [2.8, 1.67, 3, 1.67, 0.67],
 //'愚人节4-神秘的思麦尔': [3.33, 1.33, -1.6, 3, 0.8],
 //'愚人节5-纸牌与心愿': [-3.33, 2, 1.6, 1.67, 0.8],
-//'Wedding1-春与花恋': [1, 0.4, -1, 1.87, 0.4],
-//'Wedding2-星与旧友': [-2.13, -1.4, -1.4, 0.8, 0.8],
-//'Wedding3-花与华服': [1.33, 1, 1.33, 1, 1],
-//'Wedding4-心与戒指': [-1.33, 2, 0.67, 1.33, 0.33],
-//'Wedding5-爱与典礼': [-1.67, -1.2, -1.2, -1, 0.67],
+'Wedding1-春与花恋': [1, 0.4, -1, 1.87, 0.4],
+'Wedding2-星与旧友': [-2.13, -1.4, -1.4, 0.8, 0.8],
+'Wedding3-花与华服': [1.33, 1, 1.33, 1, 1],
+'Wedding4-心与戒指': [-1.33, 2, 0.67, 1.33, 0.33],
+'Wedding5-爱与典礼': [-1.67, -1.2, -1.2, -1, 0.67],
 //'倾心回忆-爱情圣地赫拉维': [0.67, -1.33, -1.33, 1.33, -1],
 //'倾心回忆-2017.5-轻便的服装': [1.0, 0.67, 1.33, 1.33, 1.33],
 //'永夜·棋1-异世的勇者': [-1.53, -1.27, 2.13, -2.33, 1.13],
@@ -822,7 +822,7 @@ var levelsRaw = {
 
 //织梦
 var dreamWeavingRaw = {	
-  //'绫罗1-6': [1.6, 1.2, -2.3, 2.1, -0.67],
+  '绫罗1-6': [1.6, 1.2, -2.3, 2.1, -0.67],
   //'绫罗2-2': [1.6, 1.4, -2.3, 2.1, -0.67],
   //'绫罗2-7': [-1.2, -1.5, 2.1, -2, 0.67],
   //'绫罗3-2': [-2.3, 1.33, -2.1, 1.6, -0.67],
@@ -947,8 +947,8 @@ function addBonusInfo(base, weight, tag) {
 //"端午6-低调的云端现代风": [addBonusInfo('B', 1, "Modern China")],
 //"端午3-竞技龙舟赛": [addBonusInfo('B', 0.5, "Sports")],
 //"端午2-端午主题的连衣裙": [addBonusInfo('C', 1, "Chinese Classical")],
-//"Wedding1-春与花恋": [addBonusInfo('S', 0.5, "Dryad")],
-//"Wedding4-心与戒指": [addBonusInfo('A', 0.5, "Floral")],
+"Wedding1-春与花恋": [addBonusInfo('S', 0.5, "Dryad")],
+"Wedding4-心与戒指": [addBonusInfo('A', 0.5, "Floral")],
 //'永夜·棋1-异世的勇者': [addBonusInfo('C', 1, "Swordsman")],
 //'永夜·棋3-黎明的启示': [addBonusInfo('C', 1, "Swordsman"), addBonusInfo('C', 1, "Fairy")],
 //'永夜·棋5-永夜的舞会': [addBonusInfo('C', 1, "Evening Gown")],
@@ -1276,8 +1276,8 @@ function addBonusInfo(base, weight, tag) {
 '协战: 啵啵-Swimsuit': [addBonusInfo('A', 1, "Swimsuit")],
 '协战: 啵啵-Pet': [addBonusInfo('A', 0.5, "Pet")],
 '协战: 啵啵-Winter': [addBonusInfo('SS', 1, "Winter")],
-  /*"绫罗1-6": [addBonusInfo('C', 1, "Chinese Classical")],
-  "绫罗2-2": [addBonusInfo('C', 1, "Chinese Classical")],
+  "绫罗1-6": [addBonusInfo('C', 1, "Chinese Classical")],
+  /*"绫罗2-2": [addBonusInfo('C', 1, "Chinese Classical")],
   "绫罗2-7": [addBonusInfo('B', 1, "Rock")],
   "绫罗3-2": [addBonusInfo('C', 1, "Chinese Classical")],
   "绫罗3-11": [addBonusInfo('C', 1, "Chinese Classical")],
@@ -1319,7 +1319,7 @@ allThemes = function() {
   var ret = {};
   for (var theme in extraRaw) {
     var criteria = extraRaw[theme];
-    ret['活动地图: ' + theme] = level(theme, parseCriteriaList(criteria));
+    ret['Event: ' + theme] = level(theme, parseCriteriaList(criteria));
   }
   for (var theme in competitionsRaw) {
     var criteria = competitionsRaw[theme];
@@ -1335,7 +1335,7 @@ allThemes = function() {
   }
   for (var theme in dreamWeavingRaw) {
     var criteria = dreamWeavingRaw[theme];
-    ret['织梦人: ' + theme] = level(theme, parseCriteriaList(criteria));
+    ret['Dreamweaver: ' + theme] = level(theme, parseCriteriaList(criteria));
   }
   return ret;
 }();
