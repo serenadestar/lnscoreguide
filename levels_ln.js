@@ -2,38 +2,22 @@ var addHintInfo = {};
 
 var addSkillsInfo = {};
 
-var pattern = [
-  ['发型','017','下装','045','3','设'],
-  ['发型','017','发型','013','4','设'],
-  ['发型','026','发型','129','3','设'],
-  ['发型','026','发型','132','1','设'],
-  ['发型','026','发型','010','3','设'],
-  ['发型','026','发型','170','1','设'],
-  ['发型','043','发型','010','3','设'],
-  ['发型','043','发型','443','8','设'],
-  ['发型','043','发型','137','3','设'],
-  ['发型','046','鞋子','025','3','设'],
-  ['发型','046','发型','013','3','设'],
-  ['发型','046','发型','007','2','设'],
-  ['发型','109','发型','192','4','设'],
-  ['发型','109','发型','094','3','设'],
-];
+var pattern = [];
 
-// 开心的修改代码
 var themeFilter = [
 	['Event', 'Event'],
 	['Stylist\'s Arena', 'Arena'],
-	['联盟协战', '协战'],
+	['Co-op Contest', 'Contest'],
 	//['联盟第十章', 'Commission: 10-'],
 	//['联盟第九章', 'Commission: 9-'],
 	//['联盟第八章', 'Commission: 8-'],
 	//['联盟第七章', 'Commission: 7-'],
-	['联盟第六章', 'Commission: 6-'],
-	['Wintermount', 'Commission: 5-'],
-	['Night of Lilth', 'Commission: 4-'],
-	['Wheat Field', 'Commission: 3-'],
-	['Cloud Empire', 'Commission: 2-'],
-	['First Request', 'Commission: 1-'],
+	['Commission 6', 'Commission: 6-'],
+	['Commission 5', 'Commission: 5-'],
+	['Commission 4', 'Commission: 4-'],
+	['Commission 3', 'Commission: 3-'],
+	['Commission 2', 'Commission: 2-'],
+	['Commission 1', 'Commission: 1-'],
 	//['Chapter 19', 'Story: 19-'],
 	//['Chapter 18', 'Story: 18-'],
 	//['Chapter 17', 'Story: 17-'],
@@ -78,25 +62,25 @@ var competitionsRaw = {
 };
 
 var tasksRaw = {
-'协战: 奥兰多-Unisex': [1.13, -2, -2.4, 0.53, -0.47],
-'协战: 奥兰多-Evening Gown': [-1.93, -1.53, -2, -1.07, 0.6],
-'协战: 艾思-European': [-2.33, -1.27, -1.2, 0.67, -1.13],
-'协战: 艾思-Traditional': [-2.73, -1.2, -2, 1.73, 1],
-'协战: 艾思-刺客联盟': [-2.27, 1.07, 1.87, -1.6, -0.67],
-'协战: 拂苏-运动风': [1.87, -1.4, 2.27, 1.73, -1.6],
-'协战: 拂苏-简约清凉的云端': [2.27, 1.2, 1.6, 1.27, 1],
-'协战: 拂苏-华丽优雅的云端': [-2, -0.73, -2, 1.33, -0.4],
-'协战: 黑卡-未来风': [2.2, 1.27, -1.67, -2.07, 1.33],
-'协战: 黑卡-女仆': [-1.73, 2, -0.93, 0.93, 0.73],
-'协战: 黑卡-海军': [1.73, 1.33, 2, 0.87, 0.8],
-'协战: 海樱-原宿少女': [-2.2, -1.93, 1.2, 0.6, 0.8],
-'协战: 海樱-现代中国': [1.33, -0.67, -1.4, 0.73, 0.4],
-'协战: 海樱-苹果少女': [-1.73, 1.87, 2.27, 1.33, 1.2],
-'协战: 洁洁云-Army': [2.13, -2.33, 1.87, -1.2, -0.8],
-'协战: 洁洁云-办公室': [2.33, -1.93, -1.8, 1.13, -0.87],
-'协战: 啵啵-Swimsuit': [-1.67, -2.47, 1.27, -1.87, 0.73],
-'协战: 啵啵-Pet': [-1.2, 1.8, 2.33, 1.2, 0.53],
-'协战: 啵啵-Winter': [-0.87, -0.93, -1.47, 0.8, -1.33],
+'Contest: Orlando-Unisex': [1.13, -2, -2.4, 0.53, -0.47],
+'Contest: Orlando-Evening Gown': [-1.93, -1.53, -2, -1.07, 0.6],
+'Contest: Ace-European': [-2.33, -1.27, -1.2, 0.67, -1.13],
+'Contest: Ace-Traditional': [-2.73, -1.2, -2, 1.73, 1],
+'Contest: Ace-Assassin': [-2.27, 1.07, 1.87, -1.6, -0.67],
+'Contest: Fu Su-Sports': [1.87, -1.4, 2.27, 1.73, -1.6],
+'Contest: Fu Su-Simple Cloud': [2.27, 1.2, 1.6, 1.27, 1],
+'Contest: Fu Su-Gorgeous Cloud': [-2, -0.73, -2, 1.33, -0.4],
+'Contest: Neva-Future': [2.2, 1.27, -1.67, -2.07, 1.33],
+'Contest: Neva-Maiden': [-1.73, 2, -0.93, 0.93, 0.73],
+'Contest: Neva-Navy': [1.73, 1.33, 2, 0.87, 0.8],
+'Contest: Kmi-Harajuku': [-2.2, -1.93, 1.2, 0.6, 0.8],
+'Contest: Kmi-Modern China': [1.33, -0.67, -1.4, 0.73, 0.4],
+'Contest: Kmi-Apple Girl': [-1.73, 1.87, 2.27, 1.33, 1.2],
+'Contest: Yvette-Army': [2.13, -2.33, 1.87, -1.2, -0.8],
+'Contest: Yvette-Office': [2.33, -1.93, -1.8, 1.13, -0.87],
+'Contest: Bobo-Swimsuit': [-1.67, -2.47, 1.27, -1.87, 0.73],
+'Contest: Bobo-Pet': [-1.2, 1.8, 2.33, 1.2, 0.53],
+'Contest: Bobo-Winter': [-0.87, -0.93, -1.47, 0.8, -1.33],
   'Commission: 1-1': [0.47, 0.67, 0.47, 0.67, -0.47],
   'Commission: 1-2': [0.87, 0.67, 0.87, 0.67, 0.67],
   'Commission: 1-3': [0.8, 0.8, -0.8, 1.0, 1.0],
@@ -169,8 +153,8 @@ var tasksRaw = {
   'Commission: 10-7': [1.2, -0.67, -1.2, -0.67, 0.4],*/
 }
 
-//活动Story，总在最前
 var extraRaw = {
+	
 };
 
 // all data are presented in order "simple", "cute", "active", "pure", "cool"
@@ -417,20 +401,19 @@ var levelsRaw = {
   '19-S3': [-0.93, 0.93, 2.2, -2.33, 0.53],*/
 };
 
-//织梦
 var dreamWeavingRaw = {	
-  '绫罗1-6': [1.6, 1.2, -2.3, 2.1, -0.67],
-  //'绫罗2-2': [1.6, 1.4, -2.3, 2.1, -0.67],
-  //'绫罗2-7': [-1.2, -1.5, 2.1, -2, 0.67],
-  //'绫罗3-2': [-2.3, 1.33, -2.1, 1.6, -0.67],
-  //'绫罗3-11': [1.5, 1.33, -2.1, 2, -0.67],
-  //'奥兰多1-6': [2.1, 1, -2, 1.33, -1],
-  //'奥兰多2-4': [-2, -1.33, -1.9, -1.4, -0.67],
-  //'洁洁云1-2': [2.1, -1.5, -2, -1.4, 0.67],
-  //'洁洁云2-7': [-2, 1.9, -1.33, 1.33, -0.67],
-  //'洁洁云3-5': [1, -1, -1, -1, 1],
-  //'克洛里斯1-3': [-2.3, 1, -2.3, 1.6, -1],
-  //'克洛里斯2-2': [1, 1, -1, 1, -1],
+  '绫罗 1-6': [1.6, 1.2, -2.3, 2.1, -0.67],
+  //'绫罗 2-2': [1.6, 1.4, -2.3, 2.1, -0.67],
+  //'绫罗 2-7': [-1.2, -1.5, 2.1, -2, 0.67],
+  //'绫罗 3-2': [-2.3, 1.33, -2.1, 1.6, -0.67],
+  //'绫罗 3-11': [1.5, 1.33, -2.1, 2, -0.67],
+  //'Orlando 1-6': [2.1, 1, -2, 1.33, -1],
+  //'Orlando 2-4': [-2, -1.33, -1.9, -1.4, -0.67],
+  //'Yvette 1-2': [2.1, -1.5, -2, -1.4, 0.67],
+  //'Yvette 2-7': [-2, 1.9, -1.33, 1.33, -0.67],
+  //'Yvette 3-5': [1, -1, -1, -1, 1],
+  //'克洛里斯 1-3': [-2.3, 1, -2.3, 1.6, -1],
+  //'克洛里斯 2-2': [1, 1, -1, 1, -1],
 }
 
 function tagMatcher(whitelist, clothes) {
@@ -536,6 +519,9 @@ function addBonusInfo(base, weight, tag) {
  *  - Special rules
  */
  var levelBonus = {
+//"繁星7-北望壁水貐": [addBonusInfo('A', 1, "Chinese Classical"), addBonusInfo('A', 1, "Modern China")],
+//"繁星5-青龙心月狐": [addBonusInfo('A', 1, "Swordsman")],
+//"繁星4-翼为羽翮": [addBonusInfo('A', 1, "Modern China"), addBonusInfo('A', 1, "Chinese Classical")],
   "1-1": [],
   "1-2": [],
   "1-3": [addBonusInfo('B', 0.25, "Chinese Classical")],
@@ -809,36 +795,36 @@ function addBonusInfo(base, weight, tag) {
   "Commission: 10-5": [addBonusInfo('S', 1, "Lolita")],
   "Commission: 10-6": [addBonusInfo('S', 1, "Modern China"), addBonusInfo('S', 0.5, "Chinese Classical")],
   "Commission: 10-7": [addBonusInfo('A', 1, "Paramedics")],*/
-  '协战: 奥兰多-Unisex': [addBonusInfo('A', 1, "Unisex")],
-'协战: 奥兰多-Evening Gown': [addBonusInfo('B', 1, "Evening Gown")],
-'协战: 艾思-European': [addBonusInfo('A', 1, "European")],
-'协战: 艾思-Traditional': [addBonusInfo('A', 1, "Traditional")],
-'协战: 艾思-刺客联盟': [addBonusInfo('B', 1, "Swordsman")],
-'协战: 拂苏-运动风': [addBonusInfo('C', 1, "Sports")],
-'协战: 拂苏-简约清凉的云端': [addBonusInfo('A', 1, "Chinese Classical")],
-'协战: 拂苏-华丽优雅的云端': [addBonusInfo('B', 1, "Chinese Classical")],
-'协战: 黑卡-未来风': [addBonusInfo('B', 1, "Future")],
-'协战: 黑卡-女仆': [addBonusInfo('S', 1, "Maiden")],
-'协战: 黑卡-海军': [addBonusInfo('S', 1, "Navy")],
-'协战: 海樱-原宿少女': [addBonusInfo('A', 1, "Harajuku")],
-'协战: 海樱-现代中国': [addBonusInfo('A', 2, "Modern China")],
-'协战: 海樱-苹果少女': [addBonusInfo('B', 1, "pop")],
-'协战: 洁洁云-Army': [addBonusInfo('A', 1, "Army")],
-'协战: 洁洁云-办公室': [addBonusInfo('S', 0.5, "Office")],
-'协战: 啵啵-Swimsuit': [addBonusInfo('A', 1, "Swimsuit")],
-'协战: 啵啵-Pet': [addBonusInfo('A', 0.5, "Pet")],
-'协战: 啵啵-Winter': [addBonusInfo('SS', 1, "Winter")],
-  "绫罗1-6": [addBonusInfo('C', 1, "Chinese Classical")],
-  /*"绫罗2-2": [addBonusInfo('C', 1, "Chinese Classical")],
-  "绫罗2-7": [addBonusInfo('B', 1, "Rock")],
-  "绫罗3-2": [addBonusInfo('C', 1, "Chinese Classical")],
-  "绫罗3-11": [addBonusInfo('C', 1, "Chinese Classical")],
-  "奥兰多1-6": [addBonusInfo('B', 1, "Preppy")],
-  "奥兰多2-4": [addBonusInfo('A', 1, "Evening Gown")],
-  "洁洁云1-2": [addBonusInfo('B', 1, "Office")],
-  "洁洁云2-7": [addBonusInfo('A', 1, "Lolita")],
-  "洁洁云3-5": [addBonusInfo('A', 1, "Office")],
-  "克洛里斯1-3": [addBonusInfo('C', 1, "Dancer")],*/
+'Contest: Orlando-Unisex': [addBonusInfo('A', 1, "Unisex")],
+'Contest: Orlando-Evening Gown': [addBonusInfo('B', 1, "Evening Gown")],
+'Contest: Ace-European': [addBonusInfo('A', 1, "European")],
+'Contest: Ace-Traditional': [addBonusInfo('A', 1, "Traditional")],
+'Contest: Ace-刺客联盟': [addBonusInfo('B', 1, "Swordsman")],
+'Contest: Fu Su-运动风': [addBonusInfo('C', 1, "Sports")],
+'Contest: Fu Su-简约清凉的云端': [addBonusInfo('A', 1, "Chinese Classical")],
+'Contest: Fu Su-华丽优雅的云端': [addBonusInfo('B', 1, "Chinese Classical")],
+'Contest: Neva-未来风': [addBonusInfo('B', 1, "Future")],
+'Contest: Neva-女仆': [addBonusInfo('S', 1, "Maiden")],
+'Contest: Neva-海军': [addBonusInfo('S', 1, "Navy")],
+'Contest: Kmi-原宿少女': [addBonusInfo('A', 1, "Harajuku")],
+'Contest: Kmi-现代中国': [addBonusInfo('A', 2, "Modern China")],
+'Contest: Kmi-苹果少女': [addBonusInfo('B', 1, "pop")],
+'Contest: Yvette-Army': [addBonusInfo('A', 1, "Army")],
+'Contest: Yvette-办公室': [addBonusInfo('S', 0.5, "Office")],
+'Contest: Bobo-Swimsuit': [addBonusInfo('A', 1, "Swimsuit")],
+'Contest: Bobo-Pet': [addBonusInfo('A', 0.5, "Pet")],
+'Contest: Bobo-Winter': [addBonusInfo('SS', 1, "Winter")],
+  "绫罗 1-6": [addBonusInfo('C', 1, "Chinese Classical")],
+  /*"绫罗 2-2": [addBonusInfo('C', 1, "Chinese Classical")],
+  "绫罗 2-7": [addBonusInfo('B', 1, "Rock")],
+  "绫罗 3-2": [addBonusInfo('C', 1, "Chinese Classical")],
+  "绫罗 3-11": [addBonusInfo('C', 1, "Chinese Classical")],
+  "Orlando 1-6": [addBonusInfo('B', 1, "Preppy")],
+  "Orlando 2-4": [addBonusInfo('A', 1, "Evening Gown")],
+  "Yvette 1-2": [addBonusInfo('B', 1, "Office")],
+  "Yvette 2-7": [addBonusInfo('A', 1, "Lolita")],
+  "Yvette 3-5": [addBonusInfo('A', 1, "Office")],
+  "克洛里斯 1-3": [addBonusInfo('C', 1, "Dancer")],*/
 };
 
 function parseCriteriaList(criteria) {
